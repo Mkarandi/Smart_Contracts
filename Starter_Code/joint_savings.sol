@@ -49,23 +49,13 @@ contract JointSavings {
         require(address(this).balance >= lastWithdrawAmount, "Insufficient funds!" );{
             
         /*
-        unction withdraw(uint amount, address payable recipient) public {
-    require (recipient == public_savings || recipient == private_savings, "You don’t own this account!");
-    require (address(this).balance >= amount, "You don't have enough funds!"); {
-       recipient.transfer(amount);
-    if (last_to_withdraw != recipient){
-        last_to_withdraw = recipient;}
-        balance = balance - last_withdraw_amount;
-    }
-  }
+       
 
         Add and `if` statement to check if the `lastToWithdraw` is not equal to (`!=`) to `recipient` If `lastToWithdraw` is not equal, then set it to the current value of `recipient`.
         */
         if  (lastToWithdraw != recipient){
             lastToWithdraw = recipient;}
-
-            
-         
+   
         
 
         // Call the `transfer` function of the `recipient` and pass it the `amount` to transfer as an argument.
